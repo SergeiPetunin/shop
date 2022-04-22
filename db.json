@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "image": "1.jpg",
+      "name": "T-shirt 1",
+      "price": 100,
+      "article": "T1",
+      "available": true
+    },
+    {
+      "image": "2.jpg",
+      "name": "T-shirt 2",
+      "price": 120,
+      "article": "T2",
+      "available": true
+    },
+    {
+      "image": "3.jpg",
+      "name": "T-shirt 3",
+      "price": 130,
+      "article": "T3",
+      "available": true
+    },
+    {
+      "image": "4.jpg",
+      "name": "T-shirt 4",
+      "price": 140,
+      "article": "T4",
+      "available": true
+    },
+    {
+      "image": "5.jpg",
+      "name": "T-shirt 5",
+      "price": 150,
+      "article": "T5",
+      "available": true
+    },
+    {
+      "image": "6.jpg",
+      "name": "T-shirt 6",
+      "price": 160,
+      "article": "T6",
+      "available": true
+    },
+    {
+      "image": "7.jpg",
+      "name": "T-shirt 7",
+      "price": 170,
+      "article": "T7",
+      "available": true
+    },
+    {
+      "image": "8.jpg",
+      "name": "T-shirt 8",
+      "price": 180,
+      "article": "T8",
+      "available": true
+    },
+    {
+      "image": "9.jpg",
+      "name": "T-shirt 9",
+      "price": 190,
+      "article": "T9",
+      "available": true
+    }
+
+  ]
+}
