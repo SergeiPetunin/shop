@@ -1,9 +1,14 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
+import store from './vuex/store'
+import router from "./router/router";
+import 'material-design-icons-iconfont' //https://fonts.google.com/icons?selected=Material+Icons
 
-const app = createApp(App)
 
-app.use(store)
+Vue.config.productionTip = false
 
-app.mount('#app')
+new Vue({
+  render: h => h(App),
+  store,
+  router
+}).$mount('#app')

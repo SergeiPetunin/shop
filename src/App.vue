@@ -1,16 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Hello Vue!</h1>
-  <MainWrapper/>
+  <div id="app">
+    <v-main-wrapper/>
+  </div>
 </template>
 
 <script>
-import MainWrapper from './components/main-wrapper.vue'
+import vMainWrapper from './components/v-main-wrapper'
+import {mapActions,mapGetters} from 'vuex'
 
 export default {
   name: 'App',
   components: {
-    MainWrapper
+    vMainWrapper
+  },
+  computed: {
+    ...mapGetters([
+      'IS_MOBILE',
+      'IS_DESKTOP'
+    ]),
+  },
+  methods: {
+    ...mapActions([
+      'SET_MOBILE',
+      'SET_DESKTOP'
+    ]),
+  },
+  mounted() {
+    let vm = this;
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 767) {
+        vm.SET_DESKTOP()
+        console.log('Desktop',vm.IS_DESKTOP)
+      } else {
+        vm.SET_MOBILE()
+        console.log('Mobile',vm.IS_MOBILE)
+      }
+    })
   }
 }
 </script>
@@ -22,7 +47,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 0 auto;
-  /*border: 5px solid yellow;*/
+  margin-top: 160px;
 }
 </style>
